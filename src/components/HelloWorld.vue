@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>rxjs - observable</h1>
+    <ul>
+      <li><router-link to="/observable/amb">amb</router-link></li>
+    </ul>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import {fromEvent} from 'rxjs'
-console.log(fromEvent)
+import {of} from 'rxjs'
+of(1,2,3).subscribe(console.log)
 export default {
   name: 'Hello',
   data () {
